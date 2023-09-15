@@ -1,0 +1,29 @@
+package automation_project;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class login_test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.setProperty("Webdriver.chrome.driver", "C:\\Users\\DELL\\Downloads\\chromedriver_win32");
+		
+		WebDriver driver= new ChromeDriver();
+		driver.get("https://facegenie-ams-school.web.app/");
+		
+		driver.manage().window().maximize();
+		
+		driver.findElement(By.id("email")).sendKeys("testbams@gmail.com");
+		
+		driver.findElement(By.id("password")).sendKeys("facegenie");
+		
+		driver.findElement(By.className("MuiButton-root")).click();
+		
+		
+
+	}
+
+}
